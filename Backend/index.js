@@ -24,7 +24,7 @@ conectarDB();
 // Se utiliza para realizar la comunicacion entre el servidor del frontend y el backend
 const dominiosPermitidos = [process.env.FRONTEND_URL];
 
-/* const corsOptions = {
+const corsOptions = {
     origin: function (origin, callback) {
         if (dominiosPermitidos.indexOf(origin) !== -1) {
             // El origen del Request esta permitido
@@ -34,7 +34,7 @@ const dominiosPermitidos = [process.env.FRONTEND_URL];
         }
     }
 };
-app.use(cors(corsOptions)); */
+app.use(cors(corsOptions)); 
 
 //gestion usuarios
 app.use('/api/usuarios', usuarioRoutes);
